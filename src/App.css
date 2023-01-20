@@ -13,6 +13,27 @@
   }
 }
 
+h2 {
+  color: black
+}
+
+h5 {
+  color: black
+}
+
+.greyText {
+  color: grey
+}
+
+.hpBox {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

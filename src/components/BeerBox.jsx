@@ -21,22 +21,37 @@ useEffect(() => {
             {beers.map((beer) => {
                 return <div key={beer._id}>
                 
-                <Link to={`/beers/${beer._id}`}>
-                <div style={{display: "flex"}}>
-                    <div>
-                        <img style={{height: 150}} src={beer.image_url} alt="beer_image" />
-                    </div>
-    
-                    <div >
-                        <h2>{beer.name}</h2>
-                        <p>{beer.tagline}</p>
-                        <p>Created by: {beer.name}</p>
-                    </div>
-                    </div>
+                <Link style={{ textDecoration: 'none' }} to={`/beers/${beer._id}`}>
+
+                    <div key={beer._id} className="card mb-3" style={{maxWidth: 540}}>
+  <div className="row g-0">
+    <div className="col-md-4">
+      <img src={beer.image_url} style={{height: "150px"}} className="img-fluid rounded-start" alt="beer_image" />
+    </div>
+    <div className="col-md-8">
+      <div className="card-body">
+        <h5 className="card-title">{beer.name}</h5>
+        <p className="card-text greyText">{beer.tagline}</p>
+        <p className="card-text"><small className="text-muted">Created by: {beer.name}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
                 </Link>
                 </div>
             })}
         </div>
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+    
     )
 
 }
